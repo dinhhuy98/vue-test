@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <div id="app">
+        {{message}}
+    </div>
+    <div id="app-2">
+        <span v-bind:title="message">
+            ddd
+        </span>
+    </div>
+    <div id="app-3">
+        <span v-if="seen">HHHHHHHHH</span>
+    </div>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+    <ol>
+        <todo-item></todo-item>
+    </ol>
+    <div id="app-7">
+        <p>Nhung thu ho mua</p>
+        <ol>
+            <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id">
+            </todo-item>
+        </ol>
+    </div>
+
+    <div id="app-8">
+        <tdc-component></tdc-component>
+    </div>
+ 
+</body>
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+</html>
