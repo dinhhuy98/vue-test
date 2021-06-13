@@ -186,7 +186,7 @@
 
         //sự kiện mở app
         function openAppAction() {
-            const token = document.URL.match(/invite\/.+/)[0].split('/')[1];
+            const token = '60c345095476b205a053dec4';
             const ua = window.navigator.userAgent;
             var appUrl = "https://sisapdeeplink.com.vn/invite?token=" + token;
             var storeLink = "market://details?id=vn.com.misa.sisap";
@@ -205,7 +205,7 @@
 
         //sự kiện mở store
         function openStoreAction() {
-            const token = document.URL.match(/invite\/.+/)[0].split('/')[1];
+            const token = '60c345095476b205a053dec4';
             const ua = window.navigator.userAgent;
             if (/iPad|iPhone|iPod/.test(ua)) {
                 window.location = "itms-apps://itunes.apple.com/app/1445546699";
