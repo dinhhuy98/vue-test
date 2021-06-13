@@ -1,59 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dịch vụ chia sẻ thông tin Nhà trường – Phụ huynh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-width: 350px;
+            max-width:768px;
+            height: 100%;
+            min-height: 100%;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .invite-page {
+            height: 100%;
+        }
+
+        #header {
+            background-color: #00AFF0;
+            background-position: center center;
+            background-size: cover;
+            width: auto;
+            max-width: 1920px;
+            height: 25%;
+        }
+
+        #container {
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+
+            #container .wrapper {
+                padding: 16px;
+                height: 40%;
+                overflow: hidden;
+                background-color: white;
+      
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-bottom: 48px;
+                margin-top: -20%;
+                border-radius: 20px;
+                box-shadow: 0px 2px 4px grey;
+            }
+
+        .btn-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10%;
+            margin-right: 10%;
+            justify-content: space-between;
+            position: relative;
+            bottom: 24px;
+            left: 0px;
+            right: 0px;
+            flex:none;
+        }
+
+        .content-wrapper {
+            margin-left: 10%;
+            margin-right: 10%;
+            flex:1;
+        }
+
+        .btn {
+            border: 1px solid #00AFF0;
+            background-color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            width: 100%;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        .bullet-number {
+            padding: 4px;
+            border-radius: 50%;
+            color: white;
+            background-color: #00AFF0;
+            text-align: center;
+            width: 10px;
+            line-height: 10px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #00AFF0;
+            color: white;
+        }
+
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+
+        .mr-4 {
+            margin-right: 4px;
+        }
+
+        .mb-16 {
+            margin-bottom: 16px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+            .row .col-l {
+                width: 33.3%;
+            }
+
+            .row .col-r {
+                width: 66.6%;
+            }
+    </style>
 </head>
 <body>
-    <h1>Hello world!</h1>
-    <div id="app">
-        {{message}}
-    </div>
-    <div id="app-2">
-        <span v-bind:title="message">
-            ddd
-        </span>
-    </div>
-    <div id="app-3">
-        <span v-if="seen">HHHHHHHHH</span>
-    </div>
-    <div id="app-4">
-        <ol>
-            <li v-for="todo in todos">
-                {{todo.text}}
-            </li>
-        </ol>
-    </div>
+    <div class="invite-page">
+        <div id="header">
 
-    <div id="app-5">
-        <p>{{message}}</p>
-        <button v-on:click="reverseMessage">Reverse Message</button>
-    </div>
+        </div>
+        <div id="container">
+            
+            <div class="wrapper">
+                <div class="row mb-16">
+                    <p>Thông tin con</p>
+                </div>
+                    <div class="row mb-8">
+                        <div class="col-l">Họ tên con</div>
+                        <div class="col-r"><code>Nguy&#x1EC5;n H&#x1EA3;i &#x110;&#x103;ng</code></div>
+                    </div>
+                    <div class="row mb-8">
+                        <div class="col-l">Mã SISAP</div>
+                        <div class="col-r"><code></code></div>
+                    </div>
+                    <div class="row mb-8">
+                        <div class="col-l">Ngày sinh</div>
+                        <div class="col-r"><code>05/02/2009 17:00:00</code></div>
+                    </div>
+                    <div class="row mb-8">
+                        <div class="col-l">Lớp</div>
+                        <div class="col-r"><code>6A1</code></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-l">Trường</div>
+                        <div class="col-r"><code>Tr&#x1B0;&#x1EDD;ng THCS7 An Ph&#xFA; </code></div>
+                    </div>
 
-    <div id="app-6">
-        <p>{{message}}</p>
-        <input v-model="message">
-    </div>
-    <ol>
-        <todo-item></todo-item>
-    </ol>
-    <div id="app-7">
-        <p>Nhung thu ho mua</p>
-        <ol>
-            <todo-item
-            v-for="item in groceryList"
-            v-bind:todo="item"
-            v-bind:key="item.id">
-            </todo-item>
-        </ol>
-    </div>
+            </div>
+            <div class="content-wrapper">
+                    <div class="row mb-16">
+                        <b>Hướng dẫn</b>
+                    </div>
+                    <div class="row mb-8">
+                        <div class="mr-4"><p class="bullet-number">1</p></div>
+                        <div>Nhấn <b>bắt đầu sử dụng</b> nếu bạn đã cài ứng dụng SISAP phụ huynh</div>
+                    </div>
+                    <div class="row">
+                        <div class="mr-4"><p class="bullet-number">2</p></div>
+                        <div>Nhấn tải ứng dụng nếu bạn chưa cài ứng dụng. Sau khi cài xong quay lại đây để <b>Bắt đầu sử dụng</b></div>
+                    </div>
 
-    <div id="app-8">
-        <tdc-component></tdc-component>
+
+            </div>
+            <div class="btn-wrapper">
+                    <button class="btn btn-primary mb-8" onclick="openAppAction()">Bắt đầu sử dụng</button>
+                <button class="btn btn-second" onclick="openStoreAction()">Tải ứng dụng</button>
+            </div>
+        </div>
     </div>
- 
+    <script>
+
+        //sự kiện mở app
+        function openAppAction() {
+            const token = document.URL.match(/invite\/.+/)[0].split('/')[1];
+            const ua = window.navigator.userAgent;
+            var appUrl = "https://sisapdeeplink.com.vn/invite?token=" + token;
+            var storeLink = "market://details?id=vn.com.misa.sisap";
+            if (/iPad|iPhone|iPod/.test(ua)) {
+                appUrl = "PH0001://PH0001?token=" + token;
+                storeLink = "itms-apps://itunes.apple.com/app/1445546699";
+            }
+            var now = new Date().valueOf();
+            //setTimeout(function () {
+            //    if (new Date().valueOf() - now > 100)
+            //        return;
+            //    window.location = storeLink;
+            //}, 50);
+            window.location = appUrl;
+        }
+
+        //sự kiện mở store
+        function openStoreAction() {
+            const token = document.URL.match(/invite\/.+/)[0].split('/')[1];
+            const ua = window.navigator.userAgent;
+            if (/iPad|iPhone|iPod/.test(ua)) {
+                window.location = "itms-apps://itunes.apple.com/app/1445546699";
+            } else {
+                window.location = "market://details?id=vn.com.misa.sisap";
+            }
+        }
+    </script>
 </body>
-<script src="js/vue.js"></script>
-<script src="js/main.js"></script>
 </html>
