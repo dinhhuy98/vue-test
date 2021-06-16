@@ -194,12 +194,7 @@
                 appUrl = "PH0001://PH0001?token=" + token;
                 storeLink = "itms-apps://itunes.apple.com/app/1445546699";
             }
-            var now = new Date().valueOf();
-            setTimeout(function () {
-                if (new Date().valueOf() - now > 2000)
-                    return;
-                window.location = storeLink;
-            }, 1000);
+           
             window.location = appUrl;
         }
 
