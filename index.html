@@ -212,13 +212,21 @@ let now = new Date().valueOf();
 
         //sự kiện mở store
         function openStoreAction() {
+var a=null;
+var appUrl=null
             const token = '60c345095476b205a053dec4';
             const ua = window.navigator.userAgent;
             if (/iPad|iPhone|iPod/.test(ua)) {
-                window.location = "itms-apps://itunes.apple.com/app/1445546699";
+                appUrl = "itms-apps://itunes.apple.com/app/1445546699";
             } else {
-                window.location = "market://details?id=vn.com.misa.sisap";
+                appUrl = "market://details?id=vn.com.misa.sisap";
             }
+
+document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd','<a id="linkApp" style="display:none" target="_blank" href="javascript:void(0)"></a>')
+            a= document.getElementById('linkApp');
+a.href=appUrl;
+a.click();
+
         }
     </script>
 </body>
