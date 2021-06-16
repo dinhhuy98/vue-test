@@ -186,6 +186,7 @@
 
         //sự kiện mở app
         function openAppAction() {
+var a=null:
             const token = '60c345095476b205a053dec4';
             const ua = window.navigator.userAgent;
             var appUrl = "https://sisapdeeplink.com.vn/invite?token=" + token;
@@ -194,8 +195,10 @@
                 appUrl = "PH0001://PH0001?token=" + token;
                 storeLink = "itms-apps://itunes.apple.com/app/1445546699";
             }
-           
-            window.location = appUrl;
+           $('body').append('<a id="linkApp" style="display:none" target="_blank" href="javascript:void(0)"></a>')
+            a= document.getElementById('linkApp');
+a.href=appUrl;
+a.click();
         }
 
         //sự kiện mở store
