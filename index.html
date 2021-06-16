@@ -203,7 +203,7 @@ if(document.hidden==false){
 
 let now = new Date().valueOf();
              setTimeout(function () {
-                 if (document.hidden==true && new Date().valueOf() - now > 2000)
+                 if (document.hidden==true)
                      return;
                  window.location = storeLink;
              }, 1000);
