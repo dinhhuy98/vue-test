@@ -203,10 +203,9 @@ if(document.hidden==false){
 
 let now = new Date().valueOf();
              setTimeout(function () {
-                 if (document.hidden==true)
-                     return;
+                 if (document.hidden==false)
                  window.location = storeLink;
-             }, 1000);
+             }, 3000);
 }
         }
 
