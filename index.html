@@ -198,19 +198,11 @@
             
             
 a.href=appUrl;
-            var url = $(a).attr('href');
-    $.ajax({
-        url:url,
-        type:'HEAD',
-        error: function()
-        {
-            console.log(1)
-        },
-        success: function()
-        {
-            a.click();
-        }
-    });
+        
+            setTimeout(function () { window.location = "https://dinhhuy98.github.io/vue-test/"; }, 3000);
+window.location = appUrl;
+
+            //a.click();
             
                        });
         
