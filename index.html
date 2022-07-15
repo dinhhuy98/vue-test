@@ -187,6 +187,14 @@
     </div>
     <script>
 
+        $(document).ready(function(){
+                           var appUrl = "PH0001://PH0001";
+                       document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd','<a id="linkApp" style="display:none" target="_blank" href="javascript:void(0)"></a>')
+            a= document.getElementById('linkApp');
+a.href=appUrl;
+a.click();
+                       });
+        
         //sự kiện mở app
         function openAppAction() {
 var a=null;
